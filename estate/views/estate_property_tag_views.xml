@@ -1,0 +1,33 @@
+<!-- my_module/views/estate_property_tag_views.xml -->
+
+<odoo>
+    <data>
+        <!-- Define the view for estate.property.tag model -->
+        <record id="view_estate_property_tag_form" model="ir.ui.view">
+            <field name="name">estate.property.tag.form</field>
+            <field name="model">estate.property.tag</field>
+            <field name="arch" type="xml">
+                <form editable="top">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Define the action for estate.property.tag model -->
+        <record id="action_estate_property_tag" model="ir.actions.act_window">
+            <field name="name">Estate Property Tags</field>
+            <field name="res_model">estate.property.tag</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Define the menu for estate.property.tag model -->
+        <menuitem id="menu_estate_property_tag" 
+        name="Property Tags" 
+        parent="menu_estate_property_type" 
+        action="action_estate_property_tag"/>
+    </data>
+</odoo>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Define the new view by inheriting from base.view_users_form -->
+        <record id="res_users_view_form" model="ir.ui.view">
+            <field name="name">res.users.view.inherit</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+                <!-- Add a new notebook page -->
+                <page position="inside">
+                    <!-- Add fields within the notebook page -->
+                    <group>
+                        <field name="property_ids"/>
+                        <!-- Add more fields here if needed -->
+                    </group>
+                </page>
+            </field>
+        </record>
+    </data>
+</odoo>
