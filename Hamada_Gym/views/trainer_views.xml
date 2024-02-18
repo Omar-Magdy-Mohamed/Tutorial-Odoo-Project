@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hamada_gym_action" model="ir.actions.act_window">
+        <field name="name">Hamada Gym</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name ="res_model">hamada.gym</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Sign the first Victim!
+            </p>
+            
+        </field>
+    </record>
+
+
+
+ 
+
+
+    <menuitem id="gym_root"
+            name="Hamada Gym"
+            sequence="10"/>
+
+    <menuitem id="first_level_root"
+            name="Trainers"
+            parent="gym_root"
+            sequence="10"/>
+
+    <menuitem id="second_level_root"
+            name="Sign in New Trainer"
+            parent="first_level_root"
+            action="hamada_gym_action"
+            sequence="10"/>
+
+    <menuitem id="trainers_root"
+            name="Sign In New Trainers"
+            parent="second_level_root"
+            action="hamada_gym_action"
+            sequence="10"/>
+
+
+</odoo>
